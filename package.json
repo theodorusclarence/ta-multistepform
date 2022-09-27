@@ -18,12 +18,25 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.2",
+    "@tanstack/react-query": "^4.6.0",
+    "@tanstack/react-query-devtools": "^4.6.0",
+    "auto-zustand-selectors-hook": "^2.0.0",
+    "axios": "^0.27.2",
     "clsx": "^1.2.1",
+    "immer": "^9.0.15",
     "next": "^12.3.0",
+    "nprogress": "^0.2.0",
     "react": "^18.2.0",
+    "react-datepicker": "^4.8.0",
     "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.2",
+    "react-hook-form": "^7.36.1",
+    "react-hot-toast": "^2.4.0",
     "react-icons": "^4.4.0",
-    "tailwind-merge": "^1.6.0"
+    "react-image-lightbox": "^5.1.4",
+    "tailwind-merge": "^1.6.0",
+    "zustand": "^4.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.3.0",
@@ -32,7 +45,9 @@
     "@tailwindcss/forms": "^0.5.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.20",
+    "@types/react-datepicker": "^4.4.2",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
     "autoprefixer": "^10.4.11",
