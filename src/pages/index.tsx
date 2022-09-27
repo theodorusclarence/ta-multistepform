@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
+import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
 
@@ -34,6 +35,15 @@ export default function HomePage() {
                 See the repository
               </ArrowLink>
             </p>
+
+            <div className='mt-8'>
+              <ButtonLink
+                href='/pendaftaran/sma/prestasi/pendataan'
+                variant='light'
+              >
+                Registrasi
+              </ButtonLink>
+            </div>
 
             <footer className='absolute bottom-2 text-gray-700'>
               © {new Date().getFullYear()} By{' '}

@@ -37,3 +37,19 @@ export function getFromSessionStorage(key: string): string | null {
   }
   return null;
 }
+
+export function keyStartsWith<T>(subString: string, object: Record<string, T>) {
+  return Object.entries(object)
+    .filter(([key]) => key.includes(subString))
+    .map((obj) => ({
+      key: obj[0],
+      value: obj[1],
+    }));
+}
+
+/**
+ * Count average of an array
+ */
+export function getAverage(args: number[]): number {
+  return args.reduce((a, v) => a + v, 0) / args.length;
+}
