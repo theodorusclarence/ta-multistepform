@@ -78,7 +78,7 @@ export default function MultipleSchoolForm({
           {readOnly ? (
             <ReadOnlyMapForm />
           ) : (
-            <MapPilihSekolah bindId='sekolah_1_sekolah' className='mt-4' />
+            <MapPilihSekolah className='mt-4' />
           )}
         </div>
       )}
