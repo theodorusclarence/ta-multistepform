@@ -64,6 +64,7 @@ export default function GeneralForm({ readOnly = false }: GeneralFormProps) {
         validation={{
           required: 'Provinsi harus diisi',
         }}
+        readOnly={readOnly}
       >
         <option value='jawa-timur'>Jawa Timur</option>
       </SelectInput>
@@ -179,6 +180,7 @@ export default function GeneralForm({ readOnly = false }: GeneralFormProps) {
         validation={{
           required: 'RT harus diisi',
         }}
+        readOnly={readOnly}
       />
 
       <Input
@@ -189,11 +191,12 @@ export default function GeneralForm({ readOnly = false }: GeneralFormProps) {
         validation={{
           required: 'RW harus diisi',
         }}
+        readOnly={readOnly}
       />
 
       <DropzoneInput
         label='Upload Foto Kartu Keluarga'
-        id='kk'
+        id='kk_file'
         accept={{
           'image/*': ['.png', '.jpg', '.jpeg'],
           'application/*': ['.pdf'],
