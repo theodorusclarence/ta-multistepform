@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import DevTool from '@/components/DevTool';
 import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
@@ -38,15 +37,10 @@ export default function HomePage() {
             </p>
 
             <div className='mt-8'>
-              <ButtonLink
-                href='/pendaftaran/sma/prestasi/pendataan'
-                variant='light'
-              >
-                Registrasi
+              <ButtonLink href='/login' variant='light'>
+                Ambil Pin
               </ButtonLink>
             </div>
-
-            <DevTool className='mt-4' />
 
             <footer className='absolute bottom-2 text-gray-700'>
               © {new Date().getFullYear()} By{' '}
