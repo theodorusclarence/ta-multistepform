@@ -1,14 +1,12 @@
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
-import toast from 'react-hot-toast';
 
 import logger from '@/lib/logger';
 
 import Button from '@/components/buttons/Button';
 import Seo from '@/components/Seo';
-import MultipleSchoolForm from '@/container/forms/school/MultipleSchoolForm';
-import ReadOnlySelectJalur from '@/container/register/ReadOnlySelectJalur';
+import MapPilihSekolah from '@/container/register/StepPilihSekolah/MapPilihSekolah';
 import StepTimeline from '@/container/register/StepTimeline';
 
 import useExistingStore from '@/store/useExistingStore';
@@ -27,20 +25,10 @@ export default function PilihSekolahPage() {
   //#endregion  //*======== Commons ===========
 
   //#region  //*============== Store
-  const administrasi = useRegisterStore.useAdministrasi();
   const pilihSekolah = useRegisterStore.usePilihSekolah();
   const existing = useExistingStore.usePilihSekolah();
   const setData = useRegisterStore.useSetData();
   //#endregion  //*============== Store
-
-  //#region  //*=========== Step Checking ===========
-  React.useEffect(() => {
-    if (!administrasi) {
-      toast.error('Silahkan mengisi data administrasi sekolah terlebih dahulu');
-      router.replace(`/pendaftaran/${TYPE_ROUTE}/administrasi`);
-    }
-  }, [router, administrasi]);
-  //#endregion  //*======== Step Checking ===========
 
   //#region  //*=========== Form ===========
   const methods = useForm<StepPilihSekolahData>({
@@ -76,7 +64,7 @@ export default function PilihSekolahPage() {
       <section className='bg-gray-100'>
         <div className='layout flex min-h-screen flex-col items-center py-20'>
           <h2 className='h4'>Pendaftaran {mapJalur[TYPE]}</h2>
-          <h1 className='mt-4'>Step Pilih Sekolah</h1>
+          <h1 className='mt-4'>Penentuan Lokasi Rumah</h1>
 
           <StepTimeline
             className='mt-8 w-full max-w-sm sm:max-w-none'
@@ -88,10 +76,9 @@ export default function PilihSekolahPage() {
           <FormProvider {...methods}>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className='mt-12 w-full max-w-sm space-y-4'
+              className='mt-12 w-full max-w-xl space-y-4'
             >
-              <ReadOnlySelectJalur existingData={existing?.register_type} />
-              <MultipleSchoolForm />
+              <MapPilihSekolah />
 
               <Button type='submit'>Next</Button>
             </form>

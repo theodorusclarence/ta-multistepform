@@ -1,10 +1,8 @@
 import clsx from 'clsx';
 import * as React from 'react';
 import {
-  HiArchive,
-  HiDocumentText,
+  HiHome,
   HiIdentification,
-  HiLibrary,
   HiOutlineExclamationCircle,
   HiThumbUp,
 } from 'react-icons/hi';
@@ -28,7 +26,7 @@ export default function StepTimeline({
   className,
   isDirty = false,
   type = 'sma/afirmasi',
-  maxStep = 5,
+  maxStep = 3,
 }: StepTimelineProps) {
   //#region  //*=========== Data ===========
   const _data = [
@@ -41,27 +39,13 @@ export default function StepTimeline({
     },
     {
       id: 2,
-      route: `/pendaftaran/${type}/berkas`,
-      target: 'Berkas',
-      icon: HiDocumentText,
+      route: `/pendaftaran/${type}/pilih-sekolah`,
+      target: 'Penentuan Lokasi Rumah',
+      icon: HiHome,
       iconBackground: 'bg-gray-300',
     },
     {
       id: 3,
-      route: `/pendaftaran/${type}/administrasi`,
-      target: 'Administrasi',
-      icon: HiArchive,
-      iconBackground: 'bg-gray-300',
-    },
-    {
-      id: 4,
-      route: `/pendaftaran/${type}/pilih-sekolah`,
-      target: 'Pilih Sekolah',
-      icon: HiLibrary,
-      iconBackground: 'bg-gray-300',
-    },
-    {
-      id: 5,
       route: `/pendaftaran/${type}/finalisasi`,
       target: 'Finalisasi Data',
       icon: HiThumbUp,
@@ -70,22 +54,17 @@ export default function StepTimeline({
   ];
 
   // remove berkas route if only 4 step
-  const data = maxStep === 5 ? _data : _data.filter((d) => d.id !== 2);
+  const data = _data;
   //#endregion  //*======== Data ===========
 
   //#region  //*=========== Store ===========
-  const administrasi = useRegisterStore.useAdministrasi();
-  const berkas = useRegisterStore.useBerkas();
   const pendataan = useRegisterStore.usePendataan();
   const pilihSekolah = useRegisterStore.usePilihSekolah();
   //#endregion  //*======== Store ===========
 
-  const _stepFilled = [pendataan, berkas, administrasi, pilihSekolah].map((i) =>
-    Boolean(i)
-  );
+  const _stepFilled = [pendataan, pilihSekolah].map((i) => Boolean(i));
   // if max step !== 5, remove stepFilled index 1
-  const stepFilled =
-    maxStep === 5 ? _stepFilled : _stepFilled.filter((_, i) => i !== 1);
+  const stepFilled = _stepFilled;
 
   const final = stepFilled.every((i) => Boolean(i));
 
@@ -104,11 +83,11 @@ export default function StepTimeline({
               : 'empty';
 
           return (
-            <li key={datum.id} className={clsx('sm:w-1/4')}>
+            <li key={datum.id} className={clsx('mx-auto sm:w-1/3')}>
               <div className='relative pb-8 sm:pb-0'>
                 {index !== data.length - 1 ? (
                   <span
-                    className='absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 sm:ml-20 sm:h-0.5 sm:w-full'
+                    className='absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200 sm:ml-36 sm:h-0.5 sm:w-full'
                     aria-hidden='true'
                   />
                 ) : null}

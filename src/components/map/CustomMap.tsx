@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import L from 'leaflet';
 import * as React from 'react';
-import { LayersControl, MapContainer, Polyline } from 'react-leaflet';
+import { LayersControl, MapContainer } from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css';
 const { BaseLayer } = LayersControl;
@@ -85,10 +85,6 @@ export default function CustomMap({
             />
           </BaseLayer>
         </LayersControl>
-        <Polyline
-          pathOptions={{ color: 'red' }}
-          positions={[markerPosition, distanceLatLong]}
-        />
         <LocationMarker setIsDragging={setIsDragging} />
       </MapContainer>
 

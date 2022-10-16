@@ -8,16 +8,13 @@ import useLoadingToast from '@/hooks/toast/useLoadingToast';
 import Button from '@/components/buttons/Button';
 import SubmissionAlert from '@/components/dialog/SubmissionAlert';
 import Seo from '@/components/Seo';
-import AdministrationForm from '@/container/forms/AdministrationForm';
 import GeneralForm from '@/container/forms/GeneralForm/GeneralForm';
-import MultipleSchoolForm from '@/container/forms/school/MultipleSchoolForm';
-import ReadOnlySelectJalur from '@/container/register/ReadOnlySelectJalur';
+import MapPilihSekolah from '@/container/register/StepPilihSekolah/MapPilihSekolah';
 import StepTimeline from '@/container/register/StepTimeline';
 
 import useRegisterStore from '@/store/useRegisterStore';
 
 import mapJalur, { RegisterType } from '@/constant/mapJalur';
-import { BerkasPrestasiAkademikSMA } from '@/pages/pendaftaran/sma/prestasi/berkas';
 
 import { FormData } from '@/types/form';
 
@@ -26,8 +23,6 @@ const TYPE_ROUTE = TYPE.replace('_', '/');
 
 export default function FinalisasiPage() {
   //#region  //*=========== Store ===========
-  const administrasi = useRegisterStore.useAdministrasi();
-  const berkas = useRegisterStore.useBerkas();
   const pendataan = useRegisterStore.usePendataan();
   const pilihSekolah = useRegisterStore.usePilihSekolah();
   //#endregion  //*======== Store ===========
@@ -41,8 +36,6 @@ export default function FinalisasiPage() {
   const methods = useForm<FormData>({
     mode: 'onTouched',
     defaultValues: {
-      ...administrasi,
-      ...berkas,
       ...pilihSekolah,
       ...pendataan,
     },
@@ -84,22 +77,6 @@ export default function FinalisasiPage() {
     };
 
     logger({ postData });
-
-    // const formData = serialize(postData);
-
-    // toast.promise(
-    //   axiosClient
-    //     .post('/student/registrations/academic_achievement', formData, {
-    //       headers: { 'Content-Type': 'multipart/form-data' },
-    //     })
-    //     .then(() => {
-    //       router.replace('/pendaftaran/jadwal_verifikasi');
-    //     }),
-    //   {
-    //     ...defaultToastMessage,
-    //     success: 'Berhasil melakukan registrasi!',
-    //   }
-    // );
   };
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
@@ -132,7 +109,7 @@ export default function FinalisasiPage() {
           <FormProvider {...methods}>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className='mt-8 max-w-sm space-y-8'
+              className='mt-8 w-full max-w-sm space-y-8'
             >
               <div className='space-y-4'>
                 <h2 className='text-xl'>Pendataan</h2>
@@ -141,22 +118,9 @@ export default function FinalisasiPage() {
               </div>
 
               <div className='space-y-4'>
-                <h2 className='text-xl'>Berkas</h2>
+                <h2 className='text-xl'>Penentuan Lokasi Rumah</h2>
 
-                <BerkasPrestasiAkademikSMA readOnly />
-              </div>
-
-              <div className='space-y-4'>
-                <h2 className='text-xl'>Administrasi</h2>
-
-                <AdministrationForm readOnly />
-              </div>
-
-              <div className='space-y-4'>
-                <h2 className='text-xl'>Pilih Sekolah</h2>
-
-                <ReadOnlySelectJalur />
-                <MultipleSchoolForm readOnly={true} />
+                <MapPilihSekolah />
               </div>
 
               <Button type='submit'>Submit</Button>

@@ -45,7 +45,7 @@ export default function PendataanPage() {
     logger({ data });
     setData({ step: 'pendataan', data });
 
-    router.push(`/pendaftaran/${TYPE_ROUTE}/berkas`);
+    router.push(`/pendaftaran/${TYPE_ROUTE}/pilih-sekolah`);
   };
   //#endregion  //*======== Form Submit ===========
 
