@@ -1,17 +1,17 @@
 import React from 'react';
 import { useFormContext } from 'react-hook-form';
 
-import { exactLength, REGEX } from '@/lib/form-utils';
+import { REGEX } from '@/lib/form-utils';
 
 import Button from '@/components/buttons/Button';
 import DatePicker from '@/components/forms/DatePicker';
+import DropzoneInput from '@/components/forms/DropzoneInput';
 import Input from '@/components/forms/Input';
 import SelectInput from '@/components/forms/SelectInput';
 import TextArea from '@/components/forms/TextArea';
+import useGeneralForm from '@/container/forms/GeneralForm/useGeneralForm';
 
 import useExistingStore from '@/store/useExistingStore';
-
-import useGeneralForm from './useGeneralForm';
 
 type GeneralFormProps = {
   readOnly?: boolean;
@@ -42,7 +42,7 @@ export default function GeneralForm({ readOnly = false }: GeneralFormProps) {
   React.useEffect(() => {
     if (cities) {
       setValue('kabupaten', getValues('kabupaten'), {
-        shouldValidate: true,
+        // shouldValidate: true,
       });
     }
   }, [getValues, cities, setValue]);
@@ -53,97 +53,20 @@ export default function GeneralForm({ readOnly = false }: GeneralFormProps) {
       });
     }
   }, [getValues, districts, setValue]);
-
   //#endregion  //*======== Reapply District & City ===========
 
   return (
     <>
-      <Input
-        label='NISN'
-        id='nisn'
-        placeholder='Masukkan 10 digit NISN'
-        validation={{
-          required: 'NISN harus diisi',
-          pattern: {
-            value: REGEX.NUMBER_ONLY,
-            message: 'NISN harus berupa angka',
-          },
-          ...exactLength(10, 'Panjang NISN harus 10 digit'),
-        }}
-        readOnly={readOnly || !!existing?.nisn}
-      />
-
-      <Input
-        label='NIK'
-        id='nik'
-        placeholder='Masukkan 16 digit NIK'
-        readOnly={readOnly}
-        validation={{
-          required: 'NIK harus diisi',
-          pattern: {
-            value: REGEX.NUMBER_ONLY,
-            message: 'NIK harus berupa angka',
-          },
-          ...exactLength(16, 'Panjang NIK harus 16 digit'),
-        }}
-      />
-
-      <DatePicker
-        label='Tanggal Lahir'
-        id='birth_date'
-        placeholder='dd/mm/yyyy'
-        validation={{ required: 'Tanggal lahir harus diisi' }}
-        readOnly={readOnly || !!existing?.birth_date}
-      />
-
-      <Input
-        label='Nama'
-        id='name'
-        placeholder='Masukkan nama anda'
-        validation={{
-          required: 'Nama harus diisi',
-        }}
-        readOnly={readOnly || !!existing?.name}
-      />
-
       <SelectInput
-        id='gender'
-        label='Jenis Kelamin'
-        placeholder='Pilih jenis kelamin'
+        label='Provinsi'
+        id='provinsi'
+        placeholder='Pilih Provinsi'
         validation={{
-          required: 'Jenis Kelamin harus diisi',
+          required: 'Provinsi harus diisi',
         }}
-        readOnly={readOnly || !!existing?.gender}
       >
-        <option value='male'>Laki-laki</option>
-        <option value='female'>Perempuan</option>
+        <option value='jawa-timur'>Jawa Timur</option>
       </SelectInput>
-
-      <Input
-        label='Nomor Telepon'
-        id='phone'
-        placeholder='Masukkan nomor telepon'
-        helperText='Gunakan format +62, contoh: +628123456789'
-        validation={{
-          required: 'Nomor telepon harus diisi',
-          pattern: {
-            value: REGEX.PHONE_NUMBER,
-            message:
-              'Nomor Telepon harus diawali +62 dan memiliki panjang 13-15 karakter',
-          },
-        }}
-        readOnly={readOnly}
-      />
-
-      <TextArea
-        label='Alamat Rumah'
-        id='address'
-        placeholder='Masukkan alamat rumah anda'
-        validation={{
-          required: 'Alamat rumah harus diisi',
-        }}
-        readOnly={readOnly || !!existing?.address}
-      />
 
       <SelectInput
         id='kabupaten'
@@ -183,6 +106,104 @@ export default function GeneralForm({ readOnly = false }: GeneralFormProps) {
           </option>
         ))}
       </SelectInput>
+
+      <Input
+        label='Desa/Kelurahan'
+        id='kelurahan'
+        placeholder='Masukkan desa/kelurahan'
+        readOnly={readOnly}
+        validation={{
+          required: 'Desa/Kelurahan harus diisi',
+        }}
+      />
+
+      <Input
+        label='NIK'
+        id='nik'
+        placeholder='Masukkan NIK'
+        readOnly={readOnly}
+        validation={{
+          required: 'NIK harus diisi',
+        }}
+      />
+
+      <Input
+        label='Nomor KK'
+        id='kk'
+        placeholder='Masukkan nomor KK'
+        readOnly={readOnly}
+        validation={{
+          required: 'Nomor KK harus diisi',
+        }}
+      />
+
+      <Input
+        label='Nomor Telepon'
+        id='phone'
+        placeholder='Masukkan nomor telepon'
+        helperText='Gunakan format +62, contoh: +628123456789'
+        validation={{
+          required: 'Nomor telepon harus diisi',
+          pattern: {
+            value: REGEX.PHONE_NUMBER,
+            message:
+              'Nomor Telepon harus diawali +62 dan memiliki panjang 13-15 karakter',
+          },
+        }}
+        readOnly={readOnly}
+      />
+
+      <DatePicker
+        label='Tanggal Penerbitan KK'
+        id='birth_date'
+        placeholder='dd/mm/yyyy'
+        validation={{ required: 'Tanggal penerbitan KK harus diisi' }}
+        readOnly={readOnly}
+      />
+
+      <TextArea
+        label='Alamat Rumah'
+        id='address'
+        placeholder='Masukkan alamat rumah anda'
+        validation={{
+          required: 'Alamat rumah harus diisi',
+        }}
+        readOnly={readOnly || !!existing?.address}
+      />
+
+      <Input
+        label='RT'
+        id='rt'
+        placeholder='Masukkan RT'
+        type='number'
+        validation={{
+          required: 'RT harus diisi',
+        }}
+      />
+
+      <Input
+        label='RW'
+        id='rw'
+        placeholder='Masukkan RW'
+        type='number'
+        validation={{
+          required: 'RW harus diisi',
+        }}
+      />
+
+      <DropzoneInput
+        label='Upload Foto Kartu Keluarga'
+        id='kk'
+        accept={{
+          'image/*': ['.png', '.jpg', '.jpeg'],
+          'application/*': ['.pdf'],
+        }}
+        helperText='File yang dapat diupload berupa .png, .jpg, .jpeg, atau .pdf'
+        validation={{
+          required: 'Foto Kartu Keluarga harus diupload',
+        }}
+        readOnly={readOnly}
+      />
 
       {!readOnly && <Button type='submit'>Next</Button>}
     </>
