@@ -1,0 +1,325 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "cjVpVPAWAMSoVTPFTxyx8",
+      "type": "rectangle",
+      "x": 186.51987911926744,
+      "y": 207.5264530735716,
+      "width": 304.34765625,
+      "height": 97.1953125,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 1407292306,
+      "version": 149,
+      "versionNonce": 1937688526,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "HxJT0bMj8C5UsK9vZNoZj"
+        },
+        {
+          "id": "MxbwCbPZ-hyOj2ndJvjgU",
+          "type": "arrow"
+        },
+        {
+          "id": "vBeHC_dlJ2Tr8iehcTzr4",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1667359941833,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "HxJT0bMj8C5UsK9vZNoZj",
+      "type": "text",
+      "x": 250.19370724426744,
+      "y": 232.6241093235716,
+      "width": 177,
+      "height": 46,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 1528513486,
+      "version": 159,
+      "versionNonce": 4785294,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1667359946048,
+      "link": null,
+      "locked": false,
+      "text": "Ambil Pin Store\n(Zustand)",
+      "fontSize": 20,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "baseline": 42,
+      "containerId": "cjVpVPAWAMSoVTPFTxyx8",
+      "originalText": "Ambil Pin Store\n(Zustand)"
+    },
+    {
+      "id": "5cc0bvF6YPvpaqBD_ItMa",
+      "type": "ellipse",
+      "x": 133.85833803002504,
+      "y": 424.6094470285099,
+      "width": 136.04568404844485,
+      "height": 136.04568404844485,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 2027158162,
+      "version": 184,
+      "versionNonce": 1136269966,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "hxAbNOOEoXh06JoP0W65j",
+          "type": "text"
+        },
+        {
+          "type": "text",
+          "id": "hxAbNOOEoXh06JoP0W65j"
+        },
+        {
+          "id": "MxbwCbPZ-hyOj2ndJvjgU",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1667359844152,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "hxAbNOOEoXh06JoP0W65j",
+      "type": "text",
+      "x": 158.88118005424747,
+      "y": 472.63228905273235,
+      "width": 86,
+      "height": 40,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 626710610,
+      "version": 241,
+      "versionNonce": 7675218,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1667359844152,
+      "link": null,
+      "locked": false,
+      "text": "Step\nPendataan",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "baseline": 36,
+      "containerId": "5cc0bvF6YPvpaqBD_ItMa",
+      "originalText": "Step\nPendataan"
+    },
+    {
+      "id": "DmA9QglSjmqi7DqJygvSH",
+      "type": "ellipse",
+      "x": 424.16361863685836,
+      "y": 422.44430626932984,
+      "width": 136.04568404844485,
+      "height": 136.04568404844485,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 1645361106,
+      "version": 285,
+      "versionNonce": 1017344338,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "0zMfVqa_eP1lcuqWNYRxD"
+        },
+        {
+          "id": "vBeHC_dlJ2Tr8iehcTzr4",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1667359845219,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "0zMfVqa_eP1lcuqWNYRxD",
+      "type": "text",
+      "x": 444.6864606610808,
+      "y": 450.46714829355227,
+      "width": 95,
+      "height": 80,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "sharp",
+      "seed": 965321806,
+      "version": 398,
+      "versionNonce": 1719960782,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1667359845219,
+      "link": null,
+      "locked": false,
+      "text": "Step\nMenentukan\nLokasi \nRumah",
+      "fontSize": 16,
+      "fontFamily": 3,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "baseline": 76,
+      "containerId": "DmA9QglSjmqi7DqJygvSH",
+      "originalText": "Step\nMenentukan\nLokasi \nRumah"
+    },
+    {
+      "id": "MxbwCbPZ-hyOj2ndJvjgU",
+      "type": "arrow",
+      "x": 325.53502048007795,
+      "y": 319.04680645869746,
+      "width": 99.99920652093084,
+      "height": 92.76672644368011,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 1836672018,
+      "version": 233,
+      "versionNonce": 1195020754,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1667359941833,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -99.99920652093084,
+          92.76672644368011
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "cjVpVPAWAMSoVTPFTxyx8",
+        "focus": -0.26768900212588087,
+        "gap": 14.325040885125873
+      },
+      "endBinding": {
+        "elementId": "5cc0bvF6YPvpaqBD_ItMa",
+        "focus": -0.6345291790791066,
+        "gap": 16.18649861483817
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "id": "vBeHC_dlJ2Tr8iehcTzr4",
+      "type": "arrow",
+      "x": 354.72060417026626,
+      "y": 320.20154819692686,
+      "width": 111.57124959600935,
+      "height": 87.10757171154341,
+      "angle": 0,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "strokeSharpness": "round",
+      "seed": 364765070,
+      "version": 263,
+      "versionNonce": 1902938002,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1667359941833,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          111.57124959600935,
+          87.10757171154341
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "cjVpVPAWAMSoVTPFTxyx8",
+        "focus": 0.30811744758987464,
+        "gap": 15.479782623355277
+      },
+      "endBinding": {
+        "elementId": "DmA9QglSjmqi7DqJygvSH",
+        "focus": 0.7293373247551752,
+        "gap": 19.07358930984894
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
