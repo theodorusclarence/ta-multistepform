@@ -1,0 +1,8 @@
+useRegisterStore = createZustandStore:
+  pendataan: DataPendataan
+  penentuanLokasi: DataPenentuanLokasi
+  setData(step, data)
+  deleteAll()
+
+
+  

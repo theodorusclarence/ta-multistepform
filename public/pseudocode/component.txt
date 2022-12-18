@@ -1,0 +1,31 @@
+Input
+  id
+  label
+  placeholder
+  validation: required
+
+Input
+  id
+  label
+  placeholder
+  validation: required
+              must be 10 digits
+
+DatePicker
+  id
+  label
+  placeholder
+  validation: required
+
+Select
+  id
+  label
+  placeholder
+  validation: required
+
+TextArea
+  id
+  label
+  placeholder
+  validation: required
+

@@ -1,0 +1,10 @@
+fill "nisn" input
+fill "npsn" input
+fill "birth date" input
+fill "tanggal terbit kartu keluarga" input
+get "Masuk" button
+click "Masuk" button
+
+verify "Nama Siswa" correct
+
+
